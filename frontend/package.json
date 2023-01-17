@@ -1,0 +1,31 @@
+{
+  "name": "webpack-hello",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "serve dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@opentelemetry/api": "^1.4.0",
+    "@opentelemetry/context-zone": "^1.9.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.35.0",
+    "@opentelemetry/instrumentation": "^0.35.0",
+    "@opentelemetry/instrumentation-fetch": "^0.35.0",
+    "@opentelemetry/resources": "^1.9.0",
+    "@opentelemetry/sdk-trace-base": "^1.9.0",
+    "@opentelemetry/sdk-trace-web": "^1.9.0",
+    "@opentelemetry/semantic-conventions": "^1.9.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.3",
+    "serve": "^12.0.0",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
