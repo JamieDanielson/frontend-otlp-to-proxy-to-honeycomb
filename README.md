@@ -1,34 +1,9 @@
-# use api proxy to send frontend telemetry to honeycomb
+in frontend dir, `npm i` and then `npm run build` and then `npm start`
 
-## api proxy backend
+in root dir, `export HONEYCOMB_API_KEY=<keyhere>` and then `docker-compose up --build`
 
-copy `.env.example` to `.env` and add api key
+in backend dir, `npm i` and then `npm start`
 
-```bash
-npm install
-npm run dev
-```
+navigate to http://localhost:5000 in web browser and click Test.
 
-see if it's up and accessible:
-
-`curl http://localhost:3000`
-
-see if it's accessible from the frontend app:
-
-`curl -i http://localhost:3000/v1/traces -H "Origin: http://localhost:5000" -H "Access-Control-Request-Method: POST" -H "Access-Control-Request-Headers: X-Requested-With" -H "Content-Type: application/json" -X OPTIONS`
-
-## frontend web app
-
-```bash
-npm install
-npm run build
-npm run start
-```
-
-go to `http://localhost:5000/` in your browser and click the Test button (see telemetry in console)
-
-## honeycomb
-
-go see trace in honeycomb
-
-![view of web trace in honeycomb](web-trace.png)
+Check the console for any possible errors, but otherwise should see it come into the collector and then into honeycomb
