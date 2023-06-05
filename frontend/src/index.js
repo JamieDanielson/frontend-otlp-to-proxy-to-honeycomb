@@ -31,7 +31,9 @@ provider.addSpanProcessor(
       //   "x-honeycomb-team": "secretkey",
       // },
       // send to backend proxy, which then sends to honeycomb
-      url: 'http://localhost:3000/v1/traces',
+      // url: 'http://localhost:3000/v1/traces',
+      // send to collector listening on 4318 by default
+      url: 'http://localhost:4318/v1/traces',
     }),
   ),
 );
